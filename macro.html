@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html>
+
+   <head>
+      <meta charset="utf-8">
+      <title>Macro</title>
+       <link rel="stylesheet" type="text/css" href="macro.css">
+   </head>
+	
+   <body>
+     <div class="mainWrapper">
+       <div class="macroWrapper">
+          <form id="macroForm" onsubmit="return false">
+            <div class="csection">
+              <h1 id="maintitle">Calculator</h1>
+            </div>
+            <div class="csection cdata">
+              <span class="title">Measurement Type:</span>
+              <div class="cradio">
+                  <input id="metric" type="radio" name="measurement" value="true" required/>
+                  <label for="metric">Metric</label>
+                  <input id="imperial" type="radio" name="measurement" value="false" checked="checked"/>
+                  <label for="imperial">Imperial</label>
+              </div>
+            </div>
+            <div class="csection cdata">
+              <span class="title">Gender:</span>
+              <div class="cradio">
+                  <input id="male" type="radio" name="gender" value="male"/>
+                  <label for="male">Male</label>
+                  <input id="female" type="radio" name="gender" value="female" checked="checked"/>
+                  <label for="female">Female</label>
+              </div>
+            </div>
+            <div class="csection cdata">
+              <label for="age">Age</label>
+              <input id="age" type="text" name="age" required/>
+            </div>
+            <div class="csection cdata">
+              <div class="imperial">
+                  <label for="imperialWeight">Weight in lbs</label>
+                  <input id="imperialWeight" type="text" name="imperialWeight"/>
+              </div>
+              <div class="metric" style="display:none;">
+                  <label for="metricWeight">Weight in kg</label>
+                  <input id="metricWeight" type="text" name="metricWeight"/>
+              </div>
+            </div>
+            <div class="csection cdata">
+              <span class="title">Height:</span>
+              <div class="imperial">
+                  <label for="feet">Feet</label>
+                  <input id="feet" type="text" name="feet"/>
+                  <br>
+                  <label for="inches">Inches</label>
+                  <input id="inches" type="text" name="inches"/>
+                  <br>
+              </div>
+              <div class="metric" style="display:none;">
+                <label for="cm">Centimeters</label>
+                <input id="cm" type="text" name="cm"/>
+              </div>
+            </div>
+<!--
+            <div class="csection">
+              <span class="title">Formula:</span>
+              <br>
+              <label for="normal">Normal</label>
+              <input id="normal" type="radio" name="formula" value="normal" checked="checked"/>
+              <label for="lean">Lean</label>
+              <input id="lean" type="radio" name="formula" value="lean"/>
+            </div>
+-->
+            <div class="csection cdata">
+              <label>Activity Level</label>
+              <select id="activitylevel" name="activity">
+                <option value="1">Sedentary</option>
+                <option value="2">Workout 3 times/week</option>
+                <option value="3">Workout 4 times/week</option>
+                <option value="4">Workout 5 times/week</option>
+                <option value="5">Workout 6 times/week</option>
+                <option value="7">Workout Every day</option>
+              </select>
+            </div>
+            <div class="csection cdata">
+              <span class="title">Goal:</span>
+              <div class="cradio">
+                  <input id="lose" type="radio" name="goal" value="lose"/>
+                  <label for="lose">Lose</label>
+                  <input id="maintain" type="radio" name="goal" value="maintain" checked="checked"/>
+                  <label for="maintain">Maintain</label>
+                  <input id="gain" type="radio" name="goal" value="gain"/>
+                  <label for="gain">Gain</label>
+              </div>
+            </div>
+            <div class="csection cdata">
+              <input id="generate" type="submit" value="Generate">
+            </div>
+          </form>
+          <div class="csection breakdownWrapper cdata" id="data" style="display:visible;">
+            <h1 id="calsperday"># Calories Per Day</h1>
+<!--            <p id="tempbreak">Breakdown: </p>-->
+            <div class="breakdown">
+                <div class="prefix_titles">
+                    <p>Carbs</p>
+                    <p>Protein</p>
+                    <p>Fat</p>
+                </div>
+                <div class="food_data">
+                    <p id="carbs">0</p>
+                    <p id="protein">0</p>
+                    <p id="fat">0</p>
+                </div>
+            </div>
+          </div>
+       </div>
+    </div>
+    
+  <script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+  <script type="text/javascript" src="iifym.js"></script>
+  <script type="text/javascript" src="macro.js"></script>
+		
+   </body>
+</html>
