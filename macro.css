@@ -1,8 +1,8 @@
-body {
-    background: #6A5835;
-    margin: 10px;
-    padding: 20px;
-    font-family: "Lucida Grande", Tahoma, Verdana, sans-serif;
+html,body {
+/*    background: #6A5835;*/
+    margin: 0;
+    padding: 0;
+/*    font-family: "Lucida Grande", Tahoma, Verdana, sans-serif;*/
 }
 
 label.error {
@@ -15,7 +15,7 @@ label.error {
 .mainWrapper {
 /*    background: #FFFCE9;*/
     margin: auto;
-    width: 70%;
+    width: 100%;
     padding-top: 5px;
     padding-bottom: 5px;
 }
@@ -23,7 +23,7 @@ label.error {
 .uptriangle {
     border-left: 10px solid rgba(0,0,0,0);
     border-right: 10px solid rgba(0,0,0,0);
-    border-bottom: 10px solid #FFFCE9;;
+    border-bottom: 10px solid #298384;;
     border-top: 10px solid rgba(0,0,0,0);
     margin: auto;
     width: 0px;
@@ -31,7 +31,7 @@ label.error {
 
 .macroWrapper {
     background: #F2E5CA;
-    border: 15px solid #FFFCE9;
+    border: 10px solid #298384;
     width: 95%;
     margin: auto;
 }
