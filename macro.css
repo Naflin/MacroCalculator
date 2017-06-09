@@ -5,16 +5,33 @@ body {
     font-family: "Lucida Grande", Tahoma, Verdana, sans-serif;
 }
 
+label.error {
+    padding: 5px;
+    color: #D8000C;
+    background-color: #FFCCBA;
+    margin-left: 5px;
+}
+
 .mainWrapper {
-    background: #FFFCE9;
+/*    background: #FFFCE9;*/
     margin: auto;
     width: 70%;
     padding-top: 5px;
     padding-bottom: 5px;
 }
 
+.uptriangle {
+    border-left: 10px solid rgba(0,0,0,0);
+    border-right: 10px solid rgba(0,0,0,0);
+    border-bottom: 10px solid #FFFCE9;;
+    border-top: 10px solid rgba(0,0,0,0);
+    margin: auto;
+    width: 0px;
+}
+
 .macroWrapper {
     background: #F2E5CA;
+    border: 15px solid #FFFCE9;
     width: 95%;
     margin: auto;
 }
@@ -45,10 +62,6 @@ body {
     border-radius: 5px;
 }
 
-.cdata {
-    
-}
-
 #feet {
     margin-bottom: 5px;
 }
@@ -73,9 +86,20 @@ body {
 }
 
 .title {
-    display:block;
+    display: block;
     margin-bottom: 5px;
     padding: 2px;
+    background-color: burlywood;
+}
+
+.clabel {
+    display: inline-block;
+    padding: 5px;
+    width: 20%;
+}
+
+.cinput {
+    
 }
 
 .cradio {
@@ -136,5 +160,4 @@ body {
     padding: 5px;
     background-color: cornflowerblue;
     color: aliceblue;
-    
 }

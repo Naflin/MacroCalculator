@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 
 <html>
-
    <head>
       <meta charset="utf-8">
       <title>Macro</title>
@@ -10,6 +9,7 @@
 	
    <body>
      <div class="mainWrapper">
+       <div class="uptriangle"></div>
        <div class="macroWrapper">
           <form id="macroForm" onsubmit="return false">
             <div class="csection">
@@ -18,48 +18,50 @@
             <div class="csection cdata">
               <span class="title">Measurement Type:</span>
               <div class="cradio">
-                  <input id="metric" type="radio" name="measurement" value="true" required/>
+                  <input class="cinput" id="metric" type="radio" name="measurement" value="true" required/>
                   <label for="metric">Metric</label>
-                  <input id="imperial" type="radio" name="measurement" value="false" checked="checked"/>
+                  <input class="cinput" id="imperial" type="radio" name="measurement" value="false" checked="checked"/>
                   <label for="imperial">Imperial</label>
               </div>
             </div>
             <div class="csection cdata">
               <span class="title">Gender:</span>
-              <div class="cradio">
-                  <input id="male" type="radio" name="gender" value="male"/>
-                  <label for="male">Male</label>
-                  <input id="female" type="radio" name="gender" value="female" checked="checked"/>
-                  <label for="female">Female</label>
-              </div>
+                  <div class="cradio">
+                      <input class="cinput" id="male" type="radio" name="gender" value="male"/>
+                      <label for="male">Male</label>
+                      <input class="cinput" id="female" type="radio" name="gender" value="female" checked="checked"/>
+                      <label for="female">Female</label>
+                  </div>
             </div>
             <div class="csection cdata">
-              <label for="age">Age</label>
-              <input id="age" type="text" name="age" required/>
+              <label class="clabel" for="age">Age</label>
+              <input class="cinput" id="age" type="number" name="age" required/>
             </div>
             <div class="csection cdata">
               <div class="imperial">
-                  <label for="imperialWeight">Weight in lbs</label>
-                  <input id="imperialWeight" type="text" name="imperialWeight"/>
+                  <label class="clabel" for="imperialWeight">Weight in lbs</label>
+                  <input class="cinput" id="imperialWeight" type="number" name="imperialWeight"/>
               </div>
               <div class="metric" style="display:none;">
-                  <label for="metricWeight">Weight in kg</label>
-                  <input id="metricWeight" type="text" name="metricWeight"/>
+                  <label class="clabel" for="metricWeight">Weight in kg</label>
+                  <input class="cinput" id="metricWeight" type="text" name="metricWeight"/>
               </div>
             </div>
             <div class="csection cdata">
               <span class="title">Height:</span>
               <div class="imperial">
-                  <label for="feet">Feet</label>
-                  <input id="feet" type="text" name="feet"/>
-                  <br>
-                  <label for="inches">Inches</label>
-                  <input id="inches" type="text" name="inches"/>
-                  <br>
+                  <div>
+                      <label class="clabel" for="feet">Feet</label>
+                      <input class="cinput" id="feet" type="number" name="feet"/>
+                  </div>
+                  <div>
+                      <label class="clabel" for="inches">Inches</label>
+                      <input class="cinput" id="inches" type="number" name="inches"/>
+                  </div>
               </div>
               <div class="metric" style="display:none;">
-                <label for="cm">Centimeters</label>
-                <input id="cm" type="text" name="cm"/>
+                <label class="clabel" for="cm">Centimeters</label>
+                <input class="cinput" id="cm" type="text" name="cm"/>
               </div>
             </div>
 <!--
@@ -73,8 +75,8 @@
             </div>
 -->
             <div class="csection cdata">
-              <label>Activity Level</label>
-              <select id="activitylevel" name="activity">
+              <label class="clabel">Activity Level</label>
+              <select class="cinput" id="activitylevel" name="activity">
                 <option value="1">Sedentary</option>
                 <option value="2">Workout 3 times/week</option>
                 <option value="3">Workout 4 times/week</option>
@@ -95,6 +97,35 @@
               </div>
             </div>
             <div class="csection cdata">
+              <span class="title">Body Type:</span>
+              <div class="cradio">
+                  <input class="cinput" id="lean" type="radio" name="formula" value="true" checked="checked" required/>
+                  <label for="lean">Lean</label>
+                  <input class="cinput" id="overweight" type="radio" name="formula" value="false"/>
+                  <label for="overweight">Overweight</label>
+              </div>
+            </div>
+            <div class="csection cdata">
+              <div class="formula-measurements" style="display:none;">
+                  <div class="male">
+                  <label class="clabel" for="waist">Waist</label>
+                  <input class="cinput" id="waist" type="number" name="waist"/>
+                  </div>
+                  <div class="female">
+                  <label class="clabel" for="wrist">Wrist</label>
+                  <input class="cinput" id="wrist" type="number" name="wrist"/>
+                  </div>
+                  <div class="female">
+                  <label class="clabel" for="hip">Hip</label>
+                  <input class="cinput" id="hip" type="number" name="hip"/>
+                  </div>
+                  <div class="female">
+                  <label class="clabel" for="forearm">Forearm</label>
+                  <input class="cinput" id="forearm" type="number" name="forearm"/>
+                  </div>
+              </div>
+            </div>
+            <div class="csection cdata">
               <input id="generate" type="submit" value="Generate">
             </div>
           </form>
@@ -106,11 +137,13 @@
                     <p>Carbs</p>
                     <p>Protein</p>
                     <p>Fat</p>
+<!--                    <p>BodyFat %</p>-->
                 </div>
                 <div class="food_data">
                     <p id="carbs">0</p>
                     <p id="protein">0</p>
                     <p id="fat">0</p>
+<!--                    <p id="bodyfatpercentage">0</p>-->
                 </div>
             </div>
           </div>
