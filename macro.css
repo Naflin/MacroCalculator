@@ -1,10 +1,150 @@
 html,body {
-/*    background: #6A5835;*/
     margin: 0;
     padding: 0;
-/*    font-family: "Lucida Grande", Tahoma, Verdana, sans-serif;*/
 }
 
+.wrapper-main {
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    background-color: #FFE98D;
+    -webkit-box-shadow:0px 1px 1px rgba(151, 147, 129, 0.9);
+    -moz-box-shadow:0px 1px 1px rgba(151, 147, 129, 0.9);
+    box-shadow:1px 1px 1px rgba(151, 147, 129, 0.9);
+    overflow: hidden;
+}
+
+.wrapper-form {
+    text-align: center;
+}
+
+.title-main {
+    width: 40%;
+    text-align: center;
+    margin: 15px auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    font-size: 2em;
+    -webkit-box-shadow:0px 1px 1px rgba(151, 147, 129, 0.9);
+    -moz-box-shadow:0px 1px 1px rgba(151, 147, 129, 0.9);
+    box-shadow:0px 1px 1px rgba(151, 147, 129, 0.9);
+}
+
+.block {
+    display: inline-block;
+    width: 40%;
+    background-color:darkolivegreen;
+    overflow: hidden;
+}
+
+.wall {
+    display: inline-block;
+    width: 80.5%;
+    background-color:darkolivegreen;
+    overflow: hidden;
+    line-height: 3;
+}
+
+.imperial {
+    height: inherit;
+}
+
+.imperial-block {
+    display: inline-block;
+    height: inherit;
+    margin-right: 10px;
+}
+
+.metric {
+    height: inherit;
+}
+
+.block:nth-child(even) {
+    background-color: aliceblue;
+}
+
+#form-macro {
+    
+}
+
+@media only screen and (max-width: 400px) {
+    .block { 
+        width: 100%;
+    }
+
+    .wall {
+        width: 100%;
+    }
+}
+
+
+.title-content {
+    display: inline;
+    float: left;
+    width: 30%;
+    height: 100%;
+    line-height: 50px;
+}
+
+.title-content-goal {
+/*
+    width: 35%;
+    padding-left: 7%;
+*/
+}
+
+.group-radio {
+    display: inline;
+    float: right;
+    width: 70%;
+    height: 100%;
+    line-height: 50px
+}
+
+.group-input {
+    display: inline;
+    float: right;
+    width: 45%;
+    height: 50%;
+    margin-top: 10px;
+    margin-right: 15%;
+}
+
+.group-input-small {
+    display: inline;
+    width: 35px;
+    height: 50%;
+    line-height: 50px;
+    margin-top: 10px;  
+}
+
+label.error {
+    padding: 5px;
+    color: #D8000C;
+    background-color: #FFCCBA;
+    margin-left: 5px;
+    overflow: visible;
+}
+
+.breakdown p{
+    display: inline-block;
+    padding: 5px;
+}
+
+/*
+.prefix-titles {
+    float: left;
+    padding: 5px;
+}
+
+.food-data {
+    float: left;
+    margin-left: 10px;
+    padding: 5px;
+}
+*/
+
+/*
 label.error {
     padding: 5px;
     color: #D8000C;
@@ -13,7 +153,6 @@ label.error {
 }
 
 .mainWrapper {
-/*    background: #FFFCE9;*/
     margin: auto;
     width: 100%;
     padding-top: 5px;
@@ -49,7 +188,6 @@ label.error {
     margin: 5px;
     padding: 5px;
     margin: auto;
-/*    background: #FFDD98;*/
 }
 
 .csection input {
@@ -160,4 +298,4 @@ label.error {
     padding: 5px;
     background-color: cornflowerblue;
     color: aliceblue;
-}
+} */

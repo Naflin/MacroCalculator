@@ -141,7 +141,7 @@ $(document).ready(function() {
     });
 });
 
-$( "#macroForm" ).validate({
+$( "#form-macro" ).validate({
   rules: {
     age: {
       required: true,

@@ -8,10 +8,122 @@
    <link rel="stylesheet" type="text/css" href="macro.css">
 </head>
 <body>
-    <div class="mainWrapper">
-            
-    </div>
-       
+    <div class="wrapper-main">
+        <div class="title-main">Macro Calculator</div>
+        <div class="wrapper-form">
+            <form id="form-macro">
+                <div class="block">
+                    <label class="title-content">Measurement Type:</label>
+                    <div class="group-radio">
+                        <input class="cinput" id="metric" type="radio" name="measurement" value="true" required/>
+                        <label for="metric">Metric</label>
+                        <input class="cinput" id="imperial" type="radio" name="measurement" value="false" checked="checked"/>
+                        <label for="imperial">Imperial</label>
+                    </div>
+                </div>
+                <div class="block">
+                    <label class="title-content">Gender:</label>
+                    <div class="group-radio">
+                        <input class="cinput" id="male" type="radio" name="gender" value="male"/>
+                        <label for="male">Male</label>
+                        <input class="cinput" id="female" type="radio" name="gender" value="female" checked="checked"/>
+                        <label for="female">Female</label>
+                    </div>
+                </div>
+                <div class="block ">
+                    <label class="title-content" for="age">Age:</label>
+                    <input class="group-input" id="age" type="number" name="age" required/>
+                </div>
+                <div class="block">
+                    <div class="imperial">
+                        <label class="title-content" for="imperialWeight">Weight in lbs</label>
+                        <input class="group-input" id="imperialWeight" type="number" name="imperialWeight"/>
+                    </div>
+                    <div class="metric" style="display:none;">
+                        <label class="title-content" for="metricWeight">Weight in kg</label>
+                        <input class="group-input" id="metricWeight" type="number" name="metricWeight"/>
+                    </div>
+                </div>
+                <div class="block">
+                    <label class="title-content" for="feet">Height:</label>
+                    <div class="imperial">
+                        <div class="imperial-block">
+                            <label class="label-content" for="feet">Feet</label>
+                            <input class="group-input-small" id="feet" type="number" name="feet"/>
+                        </div>
+                        <div class="imperial-block">
+                            <label class="label-content" for="inches">Inches</label>
+                            <input class="group-input-small" id="inches" type="number" name="inches"/>
+                        </div>
+                    </div>
+                    <div class="metric" style="display:none;">
+                        <label class="label-content" for="cm">Centimeters</label>
+                        <input class="group-input-small" id="cm" type="text" name="cm"/>
+                    </div>
+                </div>
+                <div class="block">
+                    <label class="title-content">Activity Level</label>
+                    <select class="group-input" id="activitylevel" name="activity">
+                        <option value="1">Sedentary</option>
+                        <option value="2">Workout 3 times/week</option>
+                        <option value="3">Workout 4 times/week</option>
+                        <option value="4">Workout 5 times/week</option>
+                        <option value="5">Workout 6 times/week</option>
+                        <option value="7">Workout Every day</option>
+                    </select>
+                </div>
+                <div class="block">
+                    <span class="title-content title-content-goal">Goal:</span>
+                    <div class="group-radio">
+                        <input id="lose" type="radio" name="goal" value="lose"/>
+                        <label for="lose">Lose</label>
+                        <input id="maintain" type="radio" name="goal" value="maintain" checked="checked"/>
+                        <label for="maintain">Maintain</label>
+                        <input id="gain" type="radio" name="goal" value="gain"/>
+                        <label for="gain">Gain</label>
+                    </div>
+                </div>
+                <div class="block">
+                    <span class="title-content">Body Type:</span>
+                    <div class="group-radio">
+                        <input class="cinput" id="lean" type="radio" name="formula" value="true" checked="checked" required/>
+                        <label for="lean">Lean</label>
+                        <input class="cinput" id="overweight" type="radio" name="formula" value="false"/>
+                        <label for="overweight">Overweight</label>
+                    </div>
+                </div>
+                <div class="block formula-measurements" style="display:none;">
+                    <div class="male">
+                        <label class="clabel" for="waist">Waist</label>
+                        <input class="cinput" id="waist" type="number" name="waist"/>
+                    </div>
+                    <div class="female">
+                        <label class="clabel" for="wrist">Wrist</label>
+                        <input class="cinput" id="wrist" type="number" name="wrist"/>
+                    </div>
+                    <div class="female">
+                        <label class="clabel" for="hip">Hip</label>
+                        <input class="cinput" id="hip" type="number" name="hip"/>
+                    </div>
+                    <div class="female">
+                        <label class="clabel" for="forearm">Forearm</label>
+                        <input class="cinput" id="forearm" type="number" name="forearm"/>
+                    </div>
+                </div>
+                <div class="wall">
+                     <input id="calculate" type="submit" value="Calculate">
+                </div>
+            </form>
+            <div class="wall">
+                <div id="calsperday"># Calories Per Day</div>
+                <div class="breakdown">
+                    <p>Carbs<span id="carbs">0</span></p>
+                    <p>Protein<span id="protein">0</span></p>
+                    <p>Fat<span id="fat">0</span></p>
+                </div>
+            </div>
+        </div>
+    </div>       
 <!--
      <div class="mainWrapper">
        <div class="uptriangle"></div>
