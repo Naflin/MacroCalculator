@@ -13,7 +13,7 @@
         <div class="wrapper-form">
             <form id="form-macro">
                 <div class="block">
-                    <label class="title-content">Measurement Type:</label>
+                    <label class="title-content">Measurement:</label>
                     <div class="group-radio">
                         <input class="cinput" id="metric" type="radio" name="measurement" value="true" required/>
                         <label for="metric">Metric</label>
@@ -45,20 +45,20 @@
                     </div>
                 </div>
                 <div class="block">
-                    <label class="title-content" for="feet">Height:</label>
+                    <label class="title-submain" for="feet">Height:</label>
                     <div class="imperial">
                         <div class="imperial-block">
-                            <label class="label-content" for="feet">Feet</label>
-                            <input class="group-input-small" id="feet" type="number" name="feet"/>
+                            <label class="title-content" for="feet">Feet</label>
+                            <input class="group-input" id="feet" type="number" name="feet"/>
                         </div>
                         <div class="imperial-block">
-                            <label class="label-content" for="inches">Inches</label>
-                            <input class="group-input-small" id="inches" type="number" name="inches"/>
+                            <label class="title-content" for="inches">Inches</label>
+                            <input class="group-input" id="inches" type="number" name="inches"/>
                         </div>
                     </div>
                     <div class="metric" style="display:none;">
-                        <label class="label-content" for="cm">Centimeters</label>
-                        <input class="group-input-small" id="cm" type="text" name="cm"/>
+                        <label class="title-content" for="cm">Centimeters</label>
+                        <input class="group-input" id="cm" type="number" name="cm"/>
                     </div>
                 </div>
                 <div class="block">
@@ -93,33 +93,34 @@
                     </div>
                 </div>
                 <div class="block formula-measurements" style="display:none;">
-                    <div class="male">
-                        <label class="clabel" for="waist">Waist</label>
-                        <input class="cinput" id="waist" type="number" name="waist"/>
+                    <div class="title-submain">Body Fat Percentage Measurements</div>
+                    <div class="male subblock">
+                        <label class="title-content" for="waist">Waist</label>
+                        <input class="group-input" id="waist" type="number" name="waist"/>
                     </div>
-                    <div class="female">
-                        <label class="clabel" for="wrist">Wrist</label>
-                        <input class="cinput" id="wrist" type="number" name="wrist"/>
+                    <div class="female subblock">
+                        <label class="title-content" for="wrist">Wrist</label>
+                        <input class="group-input" id="wrist" type="number" name="wrist"/>
                     </div>
-                    <div class="female">
-                        <label class="clabel" for="hip">Hip</label>
-                        <input class="cinput" id="hip" type="number" name="hip"/>
+                    <div class="female subblock">
+                        <label class="title-content" for="hip">Hip</label>
+                        <input class="group-input" id="hip" type="number" name="hip"/>
                     </div>
-                    <div class="female">
-                        <label class="clabel" for="forearm">Forearm</label>
-                        <input class="cinput" id="forearm" type="number" name="forearm"/>
+                    <div class="female subblock">
+                        <label class="title-content" for="forearm">Forearm</label>
+                        <input class="group-input" id="forearm" type="number" name="forearm"/>
                     </div>
                 </div>
-                <div class="wall">
+                <div class="block">
                      <input id="calculate" type="submit" value="Calculate">
                 </div>
             </form>
-            <div class="wall">
-                <div id="calsperday"># Calories Per Day</div>
+            <div class="block">
+                <div id="calsperday" class="title-submain"># Calories Per Day</div>
                 <div class="breakdown">
-                    <p>Carbs<span id="carbs">0</span></p>
-                    <p>Protein<span id="protein">0</span></p>
-                    <p>Fat<span id="fat">0</span></p>
+                    <p>Carbs <span id="carbs">0</span></p>
+                    <p>Protein <span id="protein">0</span></p>
+                    <p>Fat <span id="fat">0</span></p>
                 </div>
             </div>
         </div>
