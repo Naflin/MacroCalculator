@@ -9,7 +9,7 @@ html,body {
     padding: 5px;
     margin: 5px 30%;
 /*    background-color: #FFE98D;*/
-    background-color: rgba(150,39,34,0.8);
+    background-color: rgb(255, 254, 251);
     -webkit-box-shadow:0px 1px 1px rgba(151, 147, 129, 0.9);
     -moz-box-shadow:0px 1px 1px rgba(151, 147, 129, 0.9);
     box-shadow:1px 1px 1px rgba(151, 147, 129, 0.9);
@@ -17,7 +17,6 @@ html,body {
 
 .wrapper-form {
     text-align: center;
-    overflow: visible;
     position: relative;
 }
 
@@ -31,6 +30,7 @@ html,body {
     -webkit-box-shadow:0px 1px 1px rgba(151, 147, 129, 0.9);
     -moz-box-shadow:0px 1px 1px rgba(151, 147, 129, 0.9);
     box-shadow:0px 1px 1px rgba(151, 147, 129, 0.9);
+    background-color: rgb(255, 255, 255);
 }
 
 .title-submain {
@@ -42,17 +42,18 @@ html,body {
     -webkit-box-shadow:0px 1px 1px rgba(151, 147, 129, 0.9);
     -moz-box-shadow:0px 1px 1px rgba(151, 147, 129, 0.9);
     box-shadow:0px 1px 1px rgba(151, 147, 129, 0.9);
+    background-color: rgb(255, 255, 255);
 }
 
 .block {
     display: inline-block;
-    position: relative;
-    right: 15px;
-    width: 105%;
-    background-color: rgb(255, 244, 138);
+    width: 95%;
+    background-color: rgb(255, 254, 248);
+/*
     -webkit-box-shadow:0px 1px 1px rgba(151, 147, 129, 0.9);
     -moz-box-shadow:0px 1px 1px rgba(151, 147, 129, 0.9);
     box-shadow:1px 1px 1px rgba(151, 147, 129, 0.9);
+*/
     overflow: hidden;
     padding: 5px;
     border-radius: 5px;
@@ -101,8 +102,8 @@ html,body {
 
 @media only screen and (max-width: 800px) {
     .wrapper-main { 
-/*        margin: 0 auto;*/
-        margin: 1px 15px;
+        margin: 0 auto;
+        /*margin: 1px 15px;*/
     }
 }
 
@@ -197,15 +198,20 @@ label.error {
 }
 
 .group-radio input:checked + label {
-  background-color: #A5DC86;
+  background-color: #ffc401;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
 
 #calculate {
-    background-color: rgb(21, 200, 239);
+    background-color: #2A219A;
+    color: #fff;
+    text-shadow: none;
+    
     border-radius: 10px;
     padding: 10px;
+    padding-right: 20%;
+    padding-left: 20%;
     border-right: none;
     border-top: -2px solid grey;
     border-right: -2px solid grey;
