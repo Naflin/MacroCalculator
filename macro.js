@@ -141,6 +141,26 @@ $(document).ready(function() {
     });
 });
 
+// override jquery validate plugin defaults
+$.validator.setDefaults({
+    highlight: function(element) {
+        $(element).closest('.form-group').addClass('errorClass col-lg-4 col-md-4 col-sm-4 col-xs-4');
+        $(element).closest('.temp-div').hide();
+    },
+    unhighlight: function(element) {
+        $(element).closest('.temp-div').show();
+    },
+    errorElement: 'span',
+    errorClass: 'help-block',
+    errorPlacement: function(error, element) {
+        if(element.parent('.input-group').length) {
+            error.insertAfter(element.parent());
+        } else {
+            error.insertAfter(element);
+        }
+    }
+});
+
 $( "#form-macro" ).validate({
   rules: {
     age: {

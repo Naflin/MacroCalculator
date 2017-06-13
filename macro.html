@@ -5,65 +5,70 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Macro</title>
-   <link rel="stylesheet" type="text/css" href="macro.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="macro.css">
 </head>
 <body>
-    <div class="wrapper-main">
+    <div class="container-fluid">
         <div class="title-main">Macro Calculator</div>
         <div class="wrapper-form">
             <form id="form-macro">
-                <div class="block">
-                    <label class="title-content">Measurement:</label>
-                    <div class="group-radio">
+                <div class="row">
+                    <label class="col-lg-4 col-md-4 col-sm-4 col-xs-4">Measurement:</label>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                         <input class="cinput" id="metric" type="radio" name="measurement" value="true" required/>
                         <label for="metric">Metric</label>
                         <input class="cinput" id="imperial" type="radio" name="measurement" value="false" checked="checked"/>
                         <label for="imperial">Imperial</label>
                     </div>
+                    <div class="temp-div col-lg-4 col-md-4 col-sm-4 col-xs-4"></div>
                 </div>
-                <div class="block">
-                    <label class="title-content">Gender:</label>
-                    <div class="group-radio">
-                        <input class="cinput" id="male" type="radio" name="gender" value="male"/>
+                <div class="row">
+                    <label class="col-lg-4 col-md-4 col-sm-4 col-xs-4">Gender:</label>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        <input class="" id="male" type="radio" name="gender" value="male"/>
                         <label for="male">Male</label>
-                        <input class="cinput" id="female" type="radio" name="gender" value="female" checked="checked"/>
+                        <input class="" id="female" type="radio" name="gender" value="female" checked="checked"/>
                         <label for="female">Female</label>
                     </div>
+                    <div class="temp-div col-lg-4 col-md-4 col-sm-4 col-xs-4"></div>
                 </div>
-                <div class="block ">
-                    <label class="title-content" for="age">Age:</label>
-                    <input class="group-input" id="age" type="number" name="age" required/>
+                <div class="row">
+                    <label class="col-lg-4 col-md-4 col-sm-4 col-xs-4" for="age">Age:</label>
+                    <input class="col-lg-4 col-md-4 col-sm-4 col-xs-4" id="age" type="number" name="age" required/>
+                    <div class="temp-div col-lg-4 col-md-4 col-sm-4 col-xs-4"></div>
                 </div>
-                <div class="block">
-                    <div class="imperial">
-                        <label class="title-content" for="imperialWeight">Weight in lbs</label>
-                        <input class="group-input" id="imperialWeight" type="number" name="imperialWeight"/>
-                    </div>
-                    <div class="metric" style="display:none;">
-                        <label class="title-content" for="metricWeight">Weight in kg</label>
-                        <input class="group-input" id="metricWeight" type="number" name="metricWeight"/>
-                    </div>
+                <div class="imperial row">
+                    <label class="col-lg-4 col-md-4 col-sm-4 col-xs-4" for="imperialWeight">Weight in lbs</label>
+                    <input class="col-lg-4 col-md-4 col-sm-4 col-xs-4" id="imperialWeight" type="number" name="imperialWeight"/>
+                    <div class="temp-div col-lg-4 col-md-4 col-sm-4 col-xs-4"></div>
                 </div>
-                <div class="block">
-                    <label class="title-submain" for="feet">Height:</label>
-                    <div class="imperial">
-                        <div class="imperial-block">
-                            <label class="title-content" for="feet">Feet</label>
-                            <input class="group-input" id="feet" type="number" name="feet"/>
-                        </div>
-                        <div class="imperial-block">
-                            <label class="title-content" for="inches">Inches</label>
-                            <input class="group-input" id="inches" type="number" name="inches"/>
-                        </div>
-                    </div>
-                    <div class="metric" style="display:none;">
-                        <label class="title-content" for="cm">Centimeters</label>
-                        <input class="group-input" id="cm" type="number" name="cm"/>
-                    </div>
+                <div class="metric row" style="display:none;">
+                    <label class="col-lg-4 col-md-4 col-sm-4 col-xs-4" for="metricWeight">Weight in kg</label>
+                    <input class="col-lg-4 col-md-4 col-sm-4 col-xs-4" id="metricWeight" type="number" name="metricWeight"/>
+                    <div class="temp-div col-lg-4 col-md-4 col-sm-4 col-xs-4"></div>
                 </div>
-                <div class="block">
-                    <label class="title-content">Activity Level</label>
-                    <select class="group-input" id="activitylevel" name="activity">
+                <div class="row">
+                    <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12" for="feet">Height:</label>
+                </div>
+                <div class="imperial row">
+                    <label class="col-lg-4 col-md-4 col-sm-4 col-xs-4" for="feet">Feet</label>
+                    <input class="col-lg-4 col-md-4 col-sm-4 col-xs-4" id="feet" type="number" name="feet"/>
+                    <div class="temp-div col-lg-4 col-md-4 col-sm-4 col-xs-4"></div>
+                </div>
+                <div class="imperial row">
+                    <label class="col-lg-4 col-md-4 col-sm-4 col-xs-4" for="inches">Inches</label>
+                    <input class="col-lg-4 col-md-4 col-sm-4 col-xs-4" id="inches" type="number" name="inches"/>
+                    <div class="temp-div col-lg-4 col-md-4 col-sm-4 col-xs-4"></div>
+                </div>
+                <div class="metric row" style="display:none;">
+                    <label class="col-lg-4 col-md-4 col-sm-4 col-xs-4" for="cm">Centimeters</label>
+                    <input class="col-lg-4 col-md-4 col-sm-4 col-xs-4" id="cm" type="number" name="cm"/>
+                    <div class="temp-div col-lg-4 col-md-4 col-sm-4 col-xs-4"></div>
+                </div>
+                <div class="row">
+                    <label class="col-lg-4 col-md-4 col-sm-4 col-xs-4">Activity Level</label>
+                    <select class="col-lg-4 col-md-4 col-sm-4 col-xs-4" id="activitylevel" name="activity">
                         <option value="1">Sedentary</option>
                         <option value="2">Workout 3 times/week</option>
                         <option value="3">Workout 4 times/week</option>
@@ -71,10 +76,11 @@
                         <option value="5">Workout 6 times/week</option>
                         <option value="7">Workout Every day</option>
                     </select>
+                    <div class="temp-div col-lg-4 col-md-4 col-sm-4 col-xs-4"></div>
                 </div>
-                <div class="block">
-                    <span class="title-content title-content-goal">Goal:</span>
-                    <div class="group-radio">
+                <div class="row">
+                    <span class="col-lg-4 col-md-4 col-sm-4 col-xs-4">Goal:</span>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                         <input id="lose" type="radio" name="goal" value="lose"/>
                         <label for="lose">Lose</label>
                         <input id="maintain" type="radio" name="goal" value="maintain" checked="checked"/>
@@ -82,185 +88,70 @@
                         <input id="gain" type="radio" name="goal" value="gain"/>
                         <label for="gain">Gain</label>
                     </div>
+                    <div class="temp-div col-lg-4 col-md-4 col-sm-4 col-xs-4"></div>
                 </div>
-                <div class="block">
-                    <span class="title-content">Body Type:</span>
-                    <div class="group-radio">
+                <div class="row">
+                    <span class="col-lg-4 col-md-4 col-sm-4 col-xs-4">Body Type:</span>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                         <input class="cinput" id="lean" type="radio" name="formula" value="true" checked="checked" required/>
                         <label for="lean">Lean</label>
                         <input class="cinput" id="overweight" type="radio" name="formula" value="false"/>
                         <label for="overweight">Overweight</label>
                     </div>
+                    <div class="temp-div col-lg-4 col-md-4 col-sm-4 col-xs-4"></div>
                 </div>
-                <div class="block formula-measurements" style="display:none;">
-                    <div class="title-submain">Body Fat Percentage Measurements</div>
-                    <div class="male subblock">
-                        <label class="title-content" for="waist">Waist</label>
-                        <input class="group-input" id="waist" type="number" name="waist"/>
+                <div class="row formula-measurements" style="display:none;">
+                    <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12" for="waist">Body Fat Percentage Measurements</label>
+                    <div class="male row">
+                        <label class="col-lg-4 col-md-4 col-sm-4 col-xs-4" for="waist">Waist</label>
+                        <input class="col-lg-4 col-md-4 col-sm-4 col-xs-4" id="waist" type="number" name="waist"/>
+                        <div class="temp-div col-lg-4 col-md-4 col-sm-4 col-xs-4"></div>
                     </div>
-                    <div class="female subblock">
-                        <label class="title-content" for="wrist">Wrist</label>
-                        <input class="group-input" id="wrist" type="number" name="wrist"/>
+                    <div class="female row">
+                        <label class="col-lg-4 col-md-4 col-sm-4 col-xs-4" for="wrist">Wrist</label>
+                        <input class="col-lg-4 col-md-4 col-sm-4 col-xs-4" id="wrist" type="number" name="wrist"/>
+                        <div class="temp-div col-lg-4 col-md-4 col-sm-4 col-xs-4"></div>
                     </div>
-                    <div class="female subblock">
-                        <label class="title-content" for="hip">Hip</label>
-                        <input class="group-input" id="hip" type="number" name="hip"/>
+                    <div class="female row">
+                        <label class="col-lg-4 col-md-4 col-sm-4 col-xs-4" for="hip">Hip</label>
+                        <input class="col-lg-4 col-md-4 col-sm-4 col-xs-4" id="hip" type="number" name="hip"/>
+                        <div class="temp-div col-lg-4 col-md-4 col-sm-4 col-xs-4"></div>
                     </div>
-                    <div class="female subblock">
-                        <label class="title-content" for="forearm">Forearm</label>
-                        <input class="group-input" id="forearm" type="number" name="forearm"/>
+                    <div class="female row">
+                        <label class="col-lg-4 col-md-4 col-sm-4 col-xs-4" for="forearm">Forearm</label>
+                        <input class="col-lg-4 col-md-4 col-sm-4 col-xs-4" id="forearm" type="number" name="forearm"/>
+                        <div class="temp-div col-lg-4 col-md-4 col-sm-4 col-xs-4"></div>
                     </div>
                 </div>
-                <div class="block">
-                     <input id="calculate" type="submit" value="Calculate">
+                <div class="row">
+                     <div class="temp-div col-lg-4 col-md-4 col-sm-4 col-xs-4"></div>
+                     <input class="btn btn-default col-lg-4 col-md-4 col-sm-4 col-xs-4" id="calculate" type="submit" value="Calculate">
+                     <div class="temp-div col-lg-4 col-md-4 col-sm-4 col-xs-4"></div>
                 </div>
             </form>
-            <div class="block">
-                <div id="calsperday" class="title-submain"># Calories Per Day</div>
-                <div class="breakdown">
-                    <p>Carbs <span id="carbs">0</span></p>
-                    <p>Protein <span id="protein">0</span></p>
-                    <p>Fat <span id="fat">0</span></p>
+            <div class="row">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4"></div>
+                    <div id="calsperday" class="title-submain col-lg-4 col-md-4 col-sm-4 col-xs-4"># Calories Per Day</div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4"></div>
+                </div>
+                <div class="breakdown row">
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"></div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">Carbs <span id="carbs">0</span></div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">Protein <span id="protein">0</span></div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">Fat <span id="fat">0</span></div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"></div>
                 </div>
             </div>
         </div>
     </div>       
-<!--
-     <div class="mainWrapper">
-       <div class="uptriangle"></div>
-       <div class="macroWrapper">
-          <form id="macroForm" onsubmit="return false">
-            <div class="csection">
-              <h1 id="maintitle">Calculator</h1>
-            </div>
-            <div class="csection cdata">
-              <span class="title">Measurement Type:</span>
-              <div class="cradio">
-                  <input class="cinput" id="metric" type="radio" name="measurement" value="true" required/>
-                  <label for="metric">Metric</label>
-                  <input class="cinput" id="imperial" type="radio" name="measurement" value="false" checked="checked"/>
-                  <label for="imperial">Imperial</label>
-              </div>
-            </div>
-            <div class="csection cdata">
-              <span class="title">Gender:</span>
-                  <div class="cradio">
-                      <input class="cinput" id="male" type="radio" name="gender" value="male"/>
-                      <label for="male">Male</label>
-                      <input class="cinput" id="female" type="radio" name="gender" value="female" checked="checked"/>
-                      <label for="female">Female</label>
-                  </div>
-            </div>
-            <div class="csection cdata">
-              <label class="clabel" for="age">Age</label>
-              <input class="cinput" id="age" type="number" name="age" required/>
-            </div>
-            <div class="csection cdata">
-              <div class="imperial">
-                  <label class="clabel" for="imperialWeight">Weight in lbs</label>
-                  <input class="cinput" id="imperialWeight" type="number" name="imperialWeight"/>
-              </div>
-              <div class="metric" style="display:none;">
-                  <label class="clabel" for="metricWeight">Weight in kg</label>
-                  <input class="cinput" id="metricWeight" type="text" name="metricWeight"/>
-              </div>
-            </div>
-            <div class="csection cdata">
-              <span class="title">Height:</span>
-              <div class="imperial">
-                  <div>
-                      <label class="clabel" for="feet">Feet</label>
-                      <input class="cinput" id="feet" type="number" name="feet"/>
-                  </div>
-                  <div>
-                      <label class="clabel" for="inches">Inches</label>
-                      <input class="cinput" id="inches" type="number" name="inches"/>
-                  </div>
-              </div>
-              <div class="metric" style="display:none;">
-                <label class="clabel" for="cm">Centimeters</label>
-                <input class="cinput" id="cm" type="text" name="cm"/>
-              </div>
-            </div>
-            <div class="csection cdata">
-              <label class="clabel">Activity Level</label>
-              <select class="cinput" id="activitylevel" name="activity">
-                <option value="1">Sedentary</option>
-                <option value="2">Workout 3 times/week</option>
-                <option value="3">Workout 4 times/week</option>
-                <option value="4">Workout 5 times/week</option>
-                <option value="5">Workout 6 times/week</option>
-                <option value="7">Workout Every day</option>
-              </select>
-            </div>
-            <div class="csection cdata">
-              <span class="title">Goal:</span>
-              <div class="cradio">
-                  <input id="lose" type="radio" name="goal" value="lose"/>
-                  <label for="lose">Lose</label>
-                  <input id="maintain" type="radio" name="goal" value="maintain" checked="checked"/>
-                  <label for="maintain">Maintain</label>
-                  <input id="gain" type="radio" name="goal" value="gain"/>
-                  <label for="gain">Gain</label>
-              </div>
-            </div>
-            <div class="csection cdata">
-              <span class="title">Body Type:</span>
-              <div class="cradio">
-                  <input class="cinput" id="lean" type="radio" name="formula" value="true" checked="checked" required/>
-                  <label for="lean">Lean</label>
-                  <input class="cinput" id="overweight" type="radio" name="formula" value="false"/>
-                  <label for="overweight">Overweight</label>
-              </div>
-            </div>
-            <div class="csection cdata">
-              <div class="formula-measurements" style="display:none;">
-                  <div class="male">
-                  <label class="clabel" for="waist">Waist</label>
-                  <input class="cinput" id="waist" type="number" name="waist"/>
-                  </div>
-                  <div class="female">
-                  <label class="clabel" for="wrist">Wrist</label>
-                  <input class="cinput" id="wrist" type="number" name="wrist"/>
-                  </div>
-                  <div class="female">
-                  <label class="clabel" for="hip">Hip</label>
-                  <input class="cinput" id="hip" type="number" name="hip"/>
-                  </div>
-                  <div class="female">
-                  <label class="clabel" for="forearm">Forearm</label>
-                  <input class="cinput" id="forearm" type="number" name="forearm"/>
-                  </div>
-              </div>
-            </div>
-            <div class="csection cdata">
-              <input id="generate" type="submit" value="Generate">
-            </div>
-          </form>
-          <div class="csection breakdownWrapper cdata" id="data" style="display:visible;">
-            <h1 id="calsperday"># Calories Per Day</h1>
-            <div class="breakdown">
-                <div class="prefix_titles">
-                    <p>Carbs</p>
-                    <p>Protein</p>
-                    <p>Fat</p>
-                </div>
-                <div class="food_data">
-                    <p id="carbs">0</p>
-                    <p id="protein">0</p>
-                    <p id="fat">0</p>
-                </div>
-            </div>
-          </div>
-       </div>
-    </div>
--->
     
   <script
   src="https://code.jquery.com/jquery-2.2.4.min.js"
   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
   crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
   <script type="text/javascript" src="iifym.js"></script>
   <script type="text/javascript" src="macro.js"></script>
