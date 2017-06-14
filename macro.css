@@ -20,12 +20,11 @@ html,body {
 }
 
 .wrapper-form {
-    text-align: center;
-    position: relative;
+    
 }
 
 .title-main {
-    width: 40%;
+    width: 200px;
     text-align: center;
     margin: 15px auto;
     padding-right: 15px;
@@ -38,6 +37,7 @@ html,body {
 }
 
 .title-submain {
+    text-align: center;
     padding-right: 15px;
     padding-left: 15px;
     padding-bottom: 2px;
@@ -49,136 +49,32 @@ html,body {
     background-color: rgb(255, 255, 255);
 }
 
-.block {
-    display: inline-block;
-    width: 95%;
-    background-color: rgb(255, 254, 248);
-/*
-    -webkit-box-shadow:0px 1px 1px rgba(151, 147, 129, 0.9);
-    -moz-box-shadow:0px 1px 1px rgba(151, 147, 129, 0.9);
-    box-shadow:1px 1px 1px rgba(151, 147, 129, 0.9);
-*/
-    overflow: hidden;
-    padding: 5px;
-    border-radius: 5px;
-}
-
-.subblock{
-    display: inline-block;
-    width: 100%;
-}
-
-/*
-.wall {
-    display: inline-block;
-    width: 80.5%;
-    background-color:darkolivegreen;
-    overflow: hidden;
-    line-height: 3;
-}
-*/
-
-.imperial {
-    height: inherit;
-}
-
-.imperial-block {
-    display: inline-block;
-    height: inherit;
-    margin-right: 10px;
-}
-
-.metric {
-    height: inherit;
-}
-
-/*
-.block:nth-child(third) {
-    background-color: aliceblue;
-}
-*/
-
-#form-macro {
-    
-}
-
-
-
-@media only screen and (max-width: 800px) {
-    .wrapper-main { 
-        margin: 0 auto;
-        /*margin: 1px 15px;*/
-    }
-}
-
-
-.title-content {
-    display: inline;
-    float: left;
-    width: 30%;
-    height: 100%;
-    line-height: 50px
-}
-
-.title-content-goal {
-/*
-    width: 35%;
-    padding-left: 7%;
-*/
-}
-
-.group-radio {
-    display: inline-block;
-    width: 70%;
-    height: 100%;
-    line-height: 50px
-}
-
-.group-input {
-    display: inline-block;
-    width: 30%;
-    height: 50%;
-    margin-top: 15px;
-    margin-right: 1%;
-    margin-left: 5%;
-    padding: 4px;
-    border-radius: 5px;
-    
-}
-
-label.error {
-    color: #D8000C;
-    float: left;
-    line-height: 40px;
-/*    background-color: #FFCCBA;*/
-}
-
-.breakdown p{
-    display: inline-block;
-    padding: 5px;
-}
-
-
-
 /* RADIO STUFF */
 
-.group-radio {
-    overflow: hidden;
-    margin: auto;
-}
-
-.group-radio input {
+.radio-button {
     clip: rect(0, 0, 0, 0);
     height: 0;
     width: 0;
     border: 0;
     overflow: hidden;
     margin: 5px;
+    display: none;
 }
 
-.group-radio label {
-  width: 60px;
-  height: 20px;
+.radio-adjust {
+    
+}
+
+.number-input {
+    
+}
+
+.input-label {
+    text-align: right;
+}
+
+.radio-button + label {
+  width: 100px;
   background-color: #e4e4e4;
   color: rgba(0, 0, 0, 0.6);
   font-size: 14px;
@@ -197,208 +93,26 @@ label.error {
   transition:         all 0.1s ease-in-out;
 }
 
-.group-radio label:hover {
+.radio-button + label:hover {
     cursor: pointer;
 }
 
-.group-radio input:checked + label {
+.radio-button:checked + label {
   background-color: #ffc401;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
 
-#calculate {
-    
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
-#calculate:hover {
-    
-}
-    
-/*
-    border-top: 2px solid orange;
-    border-right: 2px solid orange;
-    border-bottom: none;
-    border-left: none;
-*/
-}
-
-/*
-.group-radio label:first-of-type {
-  border-radius: 4px 0 0 4px;
-}
-
-.group-radio label:last-of-type {
-  border-radius: 0 4px 4px 0;
-}
-*/
-
-
-/*
-.prefix-titles {
-    float: left;
-    padding: 5px;
-}
-
-.food-data {
-    float: left;
-    margin-left: 10px;
-    padding: 5px;
-}
-*/
-
-/*
-label.error {
-    padding: 5px;
-    color: #D8000C;
-    background-color: #FFCCBA;
-    margin-left: 5px;
-}
-
-.mainWrapper {
-    margin: auto;
-    width: 100%;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-
-.uptriangle {
-    border-left: 10px solid rgba(0,0,0,0);
-    border-right: 10px solid rgba(0,0,0,0);
-    border-bottom: 10px solid #298384;;
-    border-top: 10px solid rgba(0,0,0,0);
-    margin: auto;
-    width: 0px;
-}
-
-.macroWrapper {
-    background: #F2E5CA;
-    border: 10px solid #298384;
-    width: 95%;
-    margin: auto;
-}
-
-#macroForm {
-    padding: 5px;
-}
-
-#maintitle {
-    text-align: center;
-}
-
-.csection {
-    overflow: hidden;
-    margin: 5px;
-    padding: 5px;
-    margin: auto;
-}
-
-.csection input {
-    padding: 5px;
-    border-radius: 5px;
-}
-
-.csection select {
-    padding: 5px;
-    border-radius: 5px;
-}
-
-#feet {
-    margin-bottom: 5px;
-}
-
-.prefix_titles {
-    float: left;
-    padding: 5px;
-}
-
-.food_data {
-    float: left;
-    margin-left: 10px;
-    padding: 5px;
-}
-
-.breakdownWrapper {
-    padding: 5px;
+input[type=number] {
+    -moz-appearance:textfield;
 }
 
 .breakdown {
-    overflow: hidden;
+    text-align: center;
 }
-
-.title {
-    display: block;
-    margin-bottom: 5px;
-    padding: 2px;
-    background-color: burlywood;
-}
-
-.clabel {
-    display: inline-block;
-    padding: 5px;
-    width: 20%;
-}
-
-.cinput {
-    
-}
-
-.cradio {
-    overflow: hidden;
-    margin: auto;
-}
-
-.cradio input {
-    clip: rect(0, 0, 0, 0);
-    height: 1px;
-    width: 1px;
-    border: 0;
-    overflow: hidden;
-    margin: 5px;
-}
-
-.cradio label {
-  float: left;
-  width: 60px;
-  background-color: #e4e4e4;
-  color: rgba(0, 0, 0, 0.6);
-  font-size: 14px;
-  font-weight: normal;
-  text-align: center;
-  text-shadow: none;
-  padding: 6px 14px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
-  -webkit-transition: all 0.1s ease-in-out;
-  -moz-transition:    all 0.1s ease-in-out;
-  -ms-transition:     all 0.1s ease-in-out;
-  -o-transition:      all 0.1s ease-in-out;
-  transition:         all 0.1s ease-in-out;
-}
-
-.cradio label:hover {
-    cursor: pointer;
-}
-
-.cradio input:checked + label {
-  background-color: #A5DC86;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-
-.cradio label:first-of-type {
-  border-radius: 4px 0 0 4px;
-}
-
-.cradio label:last-of-type {
-  border-radius: 0 4px 4px 0;
-}
-
-#generate {
-    width: 100px;
-    border-radius: 5px;
-    padding: 5px;
-    background-color: cornflowerblue;
-    color: aliceblue;
-} */
